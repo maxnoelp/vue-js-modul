@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task - From static HTML to a Vue Instance</title>
+    <title>Task - Content directives</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -20,27 +20,19 @@
         </section>
     </header>
     <main>
-        <div class="inside">
-            <div class="card" id="app">
-                <h2>Welcome back <strong>{{ userName }}</strong>!</h2>
-                <p>
-                    You logged in on {{ new Date().toLocaleString("en-us") }}<br />
-                    We wish you a pleasant day.
-                </p>
-            </div>
+        <div id="app" class="inside">
+            <h2 v-once="'Directives for Vue ' + (vueVersion - 1)">
+                Directives for Vue {{ vueVersion }}
+            </h2>
+            <div class="intro" v-html="text"></div>
+            <p v-pre>
+                Sometimes v-text is better than {{ 'Some text' }} or
+                {{myDataProperty}}
+            </p>
         </div>
     </main>
     <script src="https://unpkg.com/vue@latest"></script>
-    <script>
-        const app = Vue.createApp({
-            data() {
-                return {
-                    userName: "Max Nölp",
-                };
-            },
-        }).mount("#app");
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
