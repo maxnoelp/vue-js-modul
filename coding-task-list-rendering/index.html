@@ -21,19 +21,25 @@
     </header>
     <main>
         <div id="app" class="inside">
-            <h1 :id="getNewId">{{ headline }}</h1>
-            <p>
-                Directives are special attributes with the <code>v-</code> prefix.
-                Directive attribute values are expected to be
-                <strong>a single JavaScript expression</strong> (with the exception of
-                <code>v-for</code> and <code>v-on</code>, which will be discussed
-                later). A directive's job is to reactively apply side effects to the
-                DOM when the value of its expression changes. Let's review the example
-                we saw in the introduction:
-            </p>
-            <img v-bind="imageAttrs">
+            <h1>My Books</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th v-for="overName in Object.keys(books[0])" :key="overName">{{overName}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="{title, isbn, author, publisher, price, numPages} in books" :key="books">
+                        <td>{{title}}</td>
+                        <td>{{isbn}}</td>
+                        <td>{{author}}</td>
+                        <td>{{publisher}}</td>
+                        <td>{{price}}</td>
+                        <td>{{numPages}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
     </main>
     <script src="https://unpkg.com/vue@latest"></script>
     <script src="script.js"></script>

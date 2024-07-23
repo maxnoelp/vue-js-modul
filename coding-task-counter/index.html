@@ -18,7 +18,7 @@
             </div>
             <button v-on:click="count = 0">Reset</button>
         </header>
-        <main v-on:click="count++" :style="`--counter: ${count}%`">
+        <main v-on:click="count++" v-on:keydown="count++" tabindex="0" :style="`--counter: ${count}%`">
             <label id="counter">{{ count }}</label>
         </main>
     </div>

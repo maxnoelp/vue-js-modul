@@ -10,7 +10,7 @@ Vue.createApp({
       },
     };
   },
-  computed: {
+  methods: {
     getNewId() {
       return this.headline.toLowerCase().replace(/\s+/g, "-");
     },
