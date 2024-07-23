@@ -13,3 +13,5 @@
 ## Coding Task Conditional Rendering
 
 ## Coding Task List Rendering
+
+## Coding Task Computed properties & Methods

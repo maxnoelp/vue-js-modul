@@ -21,21 +21,23 @@
     </header>
     <main>
         <div id="app" class="inside">
-            <h1>My Books</h1>
+            <h1>20% off on all books from O'Reilly Media</h1>
             <table>
                 <thead>
                     <tr>
-                        <th v-for="overName in Object.keys(books[0])" :key="overName">{{overName}}</th>
+                        <th v-for="columnName in tableColumnHeadNames" :key="columnName">
+                            {{ columnName }}
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="{title, isbn, author, publisher, price, numPages} in books" :key="isbn">
-                        <td>{{title}}</td>
-                        <td>{{isbn}}</td>
-                        <td>{{author}}</td>
-                        <td>{{publisher}}</td>
-                        <td>{{price}}</td>
-                        <td>{{numPages}}</td>
+                    <tr v-for="{ title, isbn, author, publisher, price, numPages } of filteringPublisher" :key="isbn">
+                        <td>{{ title }}</td>
+                        <td>{{ isbn }}</td>
+                        <td>{{ author }}</td>
+                        <td>{{ publisher }}</td>
+                        <td>{{ price }}<span class="strike">{{ getDiscountPrice(price, 20) }}</span></td>
+                        <td>{{ numPages }}</td>
                     </tr>
                 </tbody>
             </table>
