@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="app">
+        <p id="counting">{{ count }}</p>
+        <button @click="count++">add</button>
+        <button @click="clearBtn()">Clear</button>
+    </div> -->
+
+    <div id="app">
+        <main>
+
+            <div class="display">
+                <div class="display-input">{{ numbersWay }}</div>
+                <div class="display-output">{{ resultNum }}</div>
+            </div>
+            <div class="calculator">
+
+                <div class="numbers" @click="plusNumbers($event)">1</div>
+                <div class="numbers" @click="plusNumbers($event)">2</div>
+                <div class="numbers" @click="plusNumbers($event)">3</div>
+                <div class="numbers" @click="plusNumbers($event)">4</div>
+                <div class="numbers" @click="plusNumbers($event)">5</div>
+                <div class="numbers" @click="plusNumbers($event)">6</div>
+                <div class="numbers" @click="plusNumbers($event)">7</div>
+                <div class="numbers" @click="plusNumbers($event)">8</div>
+                <div class="numbers" @click="plusNumbers($event)">9</div>
+                <div class="numbers" id="addition" @click="plusNumbers($event)">+</div>
+                <div class="numbers" id="subtraction" @click="plusNumbers($event)">-</div>
+                <div class="numbers" id="multi" @click="plusNumbers($event)">*</div>
+                <div class="numbers" id="slash" @click="plusNumbers($event)">/</div>
+                <div class="brackets" id="bracket" @click="bracketBtn()">( )</div>
+                <div class="result" @click="resultDis($event)">=</div>
+                <div class="delete" @click="deleteOneNumBtn($event)">C</div>
+                <div class="delete-all" @click="deleteAllBtn($event)">AC</div>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

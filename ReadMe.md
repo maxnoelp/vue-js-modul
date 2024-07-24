@@ -15,3 +15,7 @@
 ## Coding Task List Rendering
 
 ## Coding Task Computed properties & Methods
+
+## Coding Task Light Switcher
+
+## Coding Task Event Handling

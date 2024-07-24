@@ -572,6 +572,7 @@ Vue.createApp({
         return book.publisher === "O'Reilly Media";
       });
     },
+    console: () => tableColumnHeadNames,
   },
   methods: {
     getDiscountPrice(dollar, discount) {

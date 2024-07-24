@@ -1,0 +1,45 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.body {
+  transition: 0.5s ease-in-out background-color;
+  background-color: white;
+}
+
+.offDark {
+  background-color: black;
+}
+
+.button {
+  font-size: 2rem;
+  cursor: pointer;
+  border: 5px solid black;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 2px;
+  color: Black;
+}
+
+.buttonOff {
+  border: 5px solid white;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 5px rgb(0, 128, 0), 0 0 10px rgb(2, 167, 2),
+    0 0 20px rgb(2, 230, 2);
+}
